@@ -12,5 +12,5 @@ public class MedEaseLogin {
     MedEaseBtn LoginBtn;    // Btn to login
     MedEaseBtn SetupBtn;    //setup Btn
     LoginEventHandeler LogEvent;
-     
+    
 }
