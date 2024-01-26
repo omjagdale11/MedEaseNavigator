@@ -4,8 +4,6 @@
  */
 package MedEaseNavigator.NotificationMoudle;
 
-import java.awt.LayoutManager;
-
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 

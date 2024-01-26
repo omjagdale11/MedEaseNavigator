@@ -1,19 +1,27 @@
 package MedEaseNavigator.DataBaseModule;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.mysql.cj.PreparedQuery;
 
 public class DBOperation {
     Connection DBcon;
     ResultSet   data;
-    PreparedQuery  preparedQuery;
+    PreparedStatement  preparedQuery;
     Statement      SqlStatement;
     public DBOperation(Connection DBcon) {
         this.DBcon=DBcon;
+        try{
+            SqlStatement =DBcon.createStatement();
+
+        }catch(SQLException ex){
+            System.out.println("Error in DBopertiaon Constructor");
+        }
     }
+    
 
 
 }

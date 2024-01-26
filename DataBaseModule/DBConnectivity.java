@@ -9,16 +9,19 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.swing.JDialog;
+
 public class DBConnectivity {
     String UserName;
     String Password;
     Connection DBCon;
     Statement SqlStaement;
-
+    JDialog Notification;
     public DBConnectivity(String UserName, String Password, Connection DBCon) {
         this.UserName = UserName;
         this.Password = Password;
         this.DBCon = DBCon;
+        
     }
 
     // Set connection with Mysql
@@ -48,10 +51,13 @@ public class DBConnectivity {
             DBCon = DriverManager.getConnection(UserName, "root", Password);
             DBCon.setAutoCommit(false);
         } catch (SQLException DBCreation) {
-
             try {
                 SqlStaement = DBCon.createStatement();
-                SqlStaement.executeQuery("Create Database " + DBName);
+                // System.out.println(UserName);
+                SqlStaement.execute("Create Database " + DBName);
+                DBCon.commit();
+                // System.out.println("Crating DB");
+                DBCon= DriverManager.getConnection(UserName, "root", Password);
                 DBCon.setAutoCommit(false);
                 return true;
 
@@ -59,6 +65,7 @@ public class DBConnectivity {
                 return false;
             }
         }
+        // System.out.println("DB exist");
         return true;
     }
     /*
