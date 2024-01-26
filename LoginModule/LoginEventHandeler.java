@@ -12,8 +12,8 @@ import java.awt.event.KeyAdapter;
 
 public class LoginEventHandeler  extends KeyAdapter implements ActionListener{
     MedEaseLogin logobj;
-    public LoginEventHandeler(){
-
+    public LoginEventHandeler(MedEaseLogin Logobj){
+        this.logobj=Logobj;
     }
     @Override
     public void actionPerformed(ActionEvent e) {

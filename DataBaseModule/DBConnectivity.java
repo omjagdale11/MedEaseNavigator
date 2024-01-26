@@ -31,6 +31,7 @@ public class DBConnectivity {
             DBCon.setAutoCommit(false);
             return true;
         } catch (SQLException connectionError) {
+            // System.out.println("ik");
             System.out.println(connectionError);
             return false;
         }
