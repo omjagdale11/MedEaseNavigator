@@ -19,7 +19,9 @@ public interface DBOpertaionInterface {
      * @return boolean   true if username and password is same
      * 
      */
-    public boolean Login(String UserName, String Password);
+    public  static  boolean Login(String UserName, String Password){
+        return false;
+    }
     
     /* Get Patient
      * @param Number get PID from Number
