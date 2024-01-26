@@ -32,7 +32,6 @@ public class MedEaseBtn extends JButton {
 
     @Override
     protected void paintComponent(Graphics g) {
-        // TODO Auto-generated method stub
         Graphics2D g2 = (Graphics2D) g;
         // super.paintComponent(g);
         g2.setColor(PaintBrushColor);
@@ -42,7 +41,6 @@ public class MedEaseBtn extends JButton {
 
     @Override
     protected void paintBorder(Graphics g) {
-        // TODO Auto-generated method stub
         // super.paintBorder(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setColor(BorderColor);

@@ -7,19 +7,28 @@
  */
 package MedEaseNavigator.DriverPackage;
 
+import MedEaseNavigator.DataBaseModule.DBConnectivity;
 import MedEaseNavigator.UtilityModule.UtilityMedease;
 
 public class MedEaseApp {
     UtilityMedease MedEaseUtil;
-    
-    MedEaseApp(){
-        MedEaseUtil = new UtilityMedease();
 
+    public MedEaseApp() {
+        MedEaseUtil = new UtilityMedease();
     }
-    
+
     public static void main(String[] args) {
-        MedEaseApp app=new MedEaseApp();
-        
+        MedEaseApp app = new MedEaseApp();
+        /*
+         * First we will setup connection with database
+         */
+        // Creating object of DBconnectivity
+        app.MedEaseUtil.DbConnectObj = new DBConnectivity("UserName", "pswd", app.MedEaseUtil.DBCon);
+        // If true then connection Sucesfull
+        if (!app.MedEaseUtil.DbConnectObj.setConnection()) {
+            System.out.println("Code is here");
+            app.MedEaseUtil.Notify.setMsg("Bhai error hogya ", -1);
+        }
 
     }
 }
