@@ -1,6 +1,6 @@
 /* This is Our Main Class from where our software will start it is like engine of our software
  * @author Ruddarm
- * @author  
+ * @author 
  * .
  * .
  * 
@@ -12,7 +12,7 @@ import MedEaseNavigator.UtilityModule.UtilityMedease;
 
 public class MedEaseApp {
     UtilityMedease MedEaseUtil;
-
+    
     public MedEaseApp() {
         MedEaseUtil = new UtilityMedease();
     }
@@ -33,7 +33,9 @@ public class MedEaseApp {
             app.MedEaseUtil.Notify.setMsg("Bhai DB nhi create hua ", -1);
         }
         // Creating Tables in Database if not exist
-        
+        // Login Moudle
+        // App main screen
+        app.MedEaseUtil.SetMainFrame();
         
 
     }

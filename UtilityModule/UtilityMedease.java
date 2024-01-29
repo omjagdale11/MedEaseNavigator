@@ -30,7 +30,6 @@ public class UtilityMedease {
         MedEaseFrmae.setVisible(true);
         MedEaseFrmae.setLayout(null);
         MedEaseFrmae.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
     }
     /*
      * this method will chech weather givn number is valid contact number or not

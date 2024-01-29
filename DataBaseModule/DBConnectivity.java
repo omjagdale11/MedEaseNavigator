@@ -73,4 +73,8 @@ public class DBConnectivity {
     /*
      * A method to create Tables in DBbase
      */
+    public boolean createPatientTable(){
+         return true;
+    }
+
 }

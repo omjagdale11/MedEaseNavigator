@@ -4,8 +4,11 @@
  */
 package MedEaseNavigator.NotificationMoudle;
 
+import java.awt.FlowLayout;
+
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.SpringLayout;
 
 import MedEaseNavigator.UtilityModule.GUIUtil;
 
@@ -16,11 +19,10 @@ public class MedEaseNotify {
     // Constructor to Create Notification pannel
     public MedEaseNotify() {
         NotifyBox = new JDialog();
-        NotifyBox.setLayout(null);
+        NotifyBox.setLayout(new FlowLayout(FlowLayout.CENTER));
         NotifyBox.setBounds(500, 200, 400, 200);
         // NotifyBox.getContentPane().setBackground(GUIUtil.Base_Background);
         errorMsg = new JLabel();
-        errorMsg.setBounds(50, 60, 250, 30);
         NotifyBox.add(errorMsg);
         NotifyBox.setVisible(false);
     }
