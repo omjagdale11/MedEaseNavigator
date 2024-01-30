@@ -50,10 +50,10 @@ public class AppointMentInterface {
         // AppointMentTable.setBounds(0, 0, 600, 400);
         jsp = new JScrollPane(AppointMentTable);
         jsp.setBounds(0, 0, 600, 350);
-        
         FrontPannel.add(jsp);
         // for (int i = 0; i < TabelHead.length; i++) {
         //      AppointMentTable.getColumnModel().getColumn(i).setMinWidth(150);
         // }
+        
     }
 }

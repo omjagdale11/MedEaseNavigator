@@ -1,6 +1,6 @@
 /*
  * GUI for srch bar
- * @Ruddarm
+ * @Ruddarm Mourya
  * 
  */
 package MedEaseNavigator.FindPatientModule;
@@ -9,14 +9,13 @@ import java.awt.Color;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 import MedEaseNavigator.MedEaseComponent.MedEaseBtn;
 import MedEaseNavigator.MedEaseComponent.MedPannel;
 import MedEaseNavigator.UtilityModule.GUIUtil;
 
 /*
- * 
+ * A constructor which will set all gui component 
  */
 public class FindCustomerUtil {
     MedPannel SrchPannel;
@@ -40,11 +39,7 @@ public class FindCustomerUtil {
         SrchFeild.setBounds(10, 5, 420, 30);
         SrchPannel.add(SrchFeild);
         SrchFeild.setFont(GUIUtil.TimesBoldS2);
-        
-
-
-    
-
     }
+    
 
 }

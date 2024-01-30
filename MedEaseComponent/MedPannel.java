@@ -29,6 +29,7 @@ public class MedPannel extends JPanel {
         this.BorderColor = BorderColor;
         this.BGColorActive = ActiveColor;
         this.Radius=Radius;
+        this.setLayout(null);
     }
 
     @Override
