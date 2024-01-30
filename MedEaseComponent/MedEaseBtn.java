@@ -27,6 +27,9 @@ public class MedEaseBtn extends JButton {
         this.BorderColor = BorderColor;
         this.ActiveColor = ActiveColor;
         this.Radius = Radius;
+        setFocusPainted(false);
+        setContentAreaFilled(false);
+
 
     }
 
@@ -35,8 +38,10 @@ public class MedEaseBtn extends JButton {
         Graphics2D g2 = (Graphics2D) g;
         // super.paintComponent(g);
         g2.setColor(PaintBrushColor);
-        g2.drawRoundRect(getX(), getY(), getWidth(), getHeight(), Radius, Radius);
-
+        g2.fillRoundRect(0, 0, getWidth(), getHeight(), Radius, Radius);
+        g2.fillRoundRect(0, 0, getWidth(), getHeight(), Radius, Radius);
+        g.setColor(PaintBrushColor);
+        super.paintComponent(g);
     }
 
     @Override
@@ -45,6 +50,6 @@ public class MedEaseBtn extends JButton {
         Graphics2D g2 = (Graphics2D) g;
         g2.setColor(BorderColor);
         g2.drawRoundRect(getX(), getY(), getWidth(), getHeight(), Radius, Radius);
-
+        
     }
 }

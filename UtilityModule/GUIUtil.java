@@ -5,7 +5,7 @@ import java.awt.Font;;
 
 public class GUIUtil {
     public static Color Base_Background = new Color(195,209,217);
-    public static Color Dark_Backgourng = new Color(63,88,83);
+    public static Color Dark_BLue = new Color(63,88,83);
     public static Color WhiteClr = Color.white;
     public static Color MedEaseGrey = new Color(217,217,217);
     public static Color WarningColor = Color.red;
