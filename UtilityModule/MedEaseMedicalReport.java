@@ -13,7 +13,6 @@ public class MedEaseMedicalReport {
     private float fees;
     // try 
     private int PID;
-    private int var;
     private int DID;
     private MedEaseMedicalReport reporthead;
     private Boolean IsVlaid;
