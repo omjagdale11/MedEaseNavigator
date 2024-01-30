@@ -44,6 +44,6 @@ public class MedPannel extends JPanel {
         // super.paintBorder(g);
         Graphics2D g2 = (Graphics2D) g;
         g2.setColor(BorderColor);
-        g2.drawRoundRect(getX(), getY(), getWidth(), getHeight(), Radius, Radius);
+        g2.drawRoundRect(0, 0, getWidth(), getHeight(), Radius, Radius);
     }
 }

@@ -7,6 +7,7 @@
  */
 package MedEaseNavigator.DriverPackage;
 
+import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.AppointMentInterface;
 import MedEaseNavigator.DataBaseModule.DBConnectivity;
 import MedEaseNavigator.FindPatientModule.FindCustomerUtil;
 import MedEaseNavigator.UtilityModule.UtilityMedease;
@@ -39,6 +40,6 @@ public class MedEaseApp {
         app.MedEaseUtil.SetMainFrame();
         //Setting Srch Bar
         new FindCustomerUtil(app.MedEaseUtil.MedEaseFrmae);
-
+        new AppointMentInterface(app.MedEaseUtil.MedEaseFrmae);
     }
 }

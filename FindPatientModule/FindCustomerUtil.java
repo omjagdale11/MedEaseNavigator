@@ -24,7 +24,7 @@ public class FindCustomerUtil {
     MedEaseBtn ScrhBtn;
 
     public FindCustomerUtil(JFrame MedeaseFrame) {
-        SrchPannel = new MedPannel(Color.white, Color.white, null, 10);
+        SrchPannel = new MedPannel(Color.white, GUIUtil.Dark_BLue, null, 10);
         // SrchPannel =new();
         SrchPannel.setBounds(100, 50, 600, 45);
         SrchPannel.setLayout(null);
