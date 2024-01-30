@@ -3,15 +3,10 @@
  * 
  */
 package MedEaseNavigator.NotificationMoudle;
-
 import java.awt.FlowLayout;
-
 import javax.swing.JDialog;
 import javax.swing.JLabel;
-import javax.swing.SpringLayout;
-
 import MedEaseNavigator.UtilityModule.GUIUtil;
-
 public class MedEaseNotify {
     JDialog NotifyBox;
     JLabel errorMsg;

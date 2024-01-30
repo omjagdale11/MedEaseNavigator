@@ -8,6 +8,7 @@
 package MedEaseNavigator.DriverPackage;
 
 import MedEaseNavigator.DataBaseModule.DBConnectivity;
+import MedEaseNavigator.FindPatientModule.FindCustomerUtil;
 import MedEaseNavigator.UtilityModule.UtilityMedease;
 
 public class MedEaseApp {
@@ -36,7 +37,8 @@ public class MedEaseApp {
         // Login Moudle
         // App main screen
         app.MedEaseUtil.SetMainFrame();
-        
+        //Setting Srch Bar
+        new FindCustomerUtil(app.MedEaseUtil.MedEaseFrmae);
 
     }
 }
