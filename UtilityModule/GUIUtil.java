@@ -13,4 +13,5 @@ public class GUIUtil {
     public static Color BlueColor = Color.blue;
     public static Font TimesBold = new Font("Times New Roman", Font.BOLD, 14);
     public static Font TimesItalic = new Font("Times New Roman", Font.ITALIC, 18);
+    public static Font TimesBoldS2=new Font("Times New Roman", Font.BOLD,18 );
 }

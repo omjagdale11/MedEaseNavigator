@@ -7,6 +7,7 @@ package MedEaseNavigator.FindPatientModule;
 
 import java.awt.Color;
 
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -35,6 +36,12 @@ public class FindCustomerUtil {
         ScrhBtn.setForeground(GUIUtil.WhiteClr);
         SrchPannel.add(ScrhBtn);
         SrchFeild = new JTextField();
+        SrchFeild.setBorder(BorderFactory.createLineBorder(GUIUtil.WhiteClr));
+        SrchFeild.setBounds(10, 5, 420, 30);
+        SrchPannel.add(SrchFeild);
+        SrchFeild.setFont(GUIUtil.TimesBoldS2);
+        
+
 
     
 
