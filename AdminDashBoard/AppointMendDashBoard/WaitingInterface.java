@@ -39,10 +39,14 @@ public class WaitingInterface {
         for (String string : TableHead) {
             Dtm.addColumn(string);
         }
+
         WattingTable = new JTable(Dtm);
         jsp = new JScrollPane(WattingTable);
         jsp.setBounds(0, 0, 500, 250);
-        FrontPannel.add(jsp);
+        FrontPannel.add(jsp);   
+        for (int i = 0; i < WattingTable.getColumnCount(); i++) {
+            WattingTable.getColumnModel().getColumn(i).setCellRenderer(DashBoardUtil.render);
+        }
 
 
     }

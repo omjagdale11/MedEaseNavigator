@@ -8,6 +8,7 @@
 package MedEaseNavigator.DriverPackage;
 
 import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.AppointMentInterface;
+import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.PaymentInterface;
 import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.WaitingInterface;
 import MedEaseNavigator.DataBaseModule.DBConnectivity;
 import MedEaseNavigator.FindPatientModule.FindCustomerUtil;
@@ -43,5 +44,7 @@ public class MedEaseApp {
         new FindCustomerUtil(app.MedEaseUtil.MedEaseFrmae);
         new AppointMentInterface(app.MedEaseUtil.MedEaseFrmae);
         new WaitingInterface(app.MedEaseUtil.MedEaseFrmae);
+        new PaymentInterface(app.MedEaseUtil.MedEaseFrmae);
+        
     }
 }
