@@ -12,7 +12,9 @@ import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.PaymentInterface;
 import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.WaitingInterface;
 import MedEaseNavigator.DataBaseModule.DBConnectivity;
 import MedEaseNavigator.FindPatientModule.FindCustomerUtil;
+import MedEaseNavigator.LoginModule.MedEaseLogin;
 import MedEaseNavigator.UtilityModule.UtilityMedease;
+import MedEaseNavigator.MedMenuBar.*;
 
 public class MedEaseApp {
     UtilityMedease MedEaseUtil;
@@ -39,12 +41,15 @@ public class MedEaseApp {
         // Creating Tables in Database if not exist
         // Login Moudle
         // App main screen
+        new MedEaseLogin();
         app.MedEaseUtil.SetMainFrame();
         //Setting Srch Bar
+        new MenuBar(app.MedEaseUtil.MedEaseFrmae);
         new FindCustomerUtil(app.MedEaseUtil.MedEaseFrmae);
         new AppointMentInterface(app.MedEaseUtil.MedEaseFrmae);
         new WaitingInterface(app.MedEaseUtil.MedEaseFrmae);
         new PaymentInterface(app.MedEaseUtil.MedEaseFrmae);
         
+
     }
 }

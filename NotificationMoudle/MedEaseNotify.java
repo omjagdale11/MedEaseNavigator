@@ -16,7 +16,7 @@ public class MedEaseNotify {
         NotifyBox = new JDialog();
         NotifyBox.setLayout(new FlowLayout(FlowLayout.CENTER));
         NotifyBox.setBounds(500, 200, 400, 200);
-        // NotifyBox.getContentPane().setBackground(GUIUtil.Base_Background);
+        NotifyBox.getContentPane().setBackground(GUIUtil.Base_Background);
         errorMsg = new JLabel();
         NotifyBox.add(errorMsg);
         NotifyBox.setVisible(false);
@@ -37,4 +37,5 @@ public class MedEaseNotify {
             NotifyBox.setVisible(true);
         }
     }
+    
 }
