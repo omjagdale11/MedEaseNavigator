@@ -30,6 +30,21 @@ public class UtilityMedease {
         MedEaseFrmae.setVisible(true);
         MedEaseFrmae.setLayout(null);
         MedEaseFrmae.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
     }
+    /*
+     * this method will chech weather givn number is valid contact number or not
+     * @param Number  A string of Number
+     * @return   boolean     true if String length =10 and String char== 0 to 9;
+     * 
+     */
+    public boolean isValidNumber(String Number){
+        return false;
+    }
+    /*
+     * A Method to count Character in String 
+     * @param String    A set of character array
+     * @return int      Number of character in given String
+     */
+    
 }
+

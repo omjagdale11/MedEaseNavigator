@@ -32,6 +32,10 @@ public class DBConnectivity {
             DBCon.setAutoCommit(false);
             return true;
         } catch (SQLException connectionError) {
+<<<<<<< HEAD
+=======
+            // System.out.println("ik");
+>>>>>>> cf15fe229a44e7ee4bf6f1c20a432636db11fdee
             System.out.println(connectionError);
             return false;
         }
@@ -73,4 +77,8 @@ public class DBConnectivity {
     /*
      * A method to create Tables in DBbase
      */
+    public boolean createPatientTable(){
+         return true;
+    }
+
 }
