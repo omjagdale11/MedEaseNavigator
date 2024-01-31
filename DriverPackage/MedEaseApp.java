@@ -11,6 +11,7 @@ import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.AppointMentInterface
 import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.PaymentInterface;
 import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.WaitingInterface;
 import MedEaseNavigator.DataBaseModule.DBConnectivity;
+import MedEaseNavigator.DoctorDashBoard.MedDoctorDashBoard;
 import MedEaseNavigator.FindPatientModule.FindCustomerUtil;
 import MedEaseNavigator.LoginModule.MedEaseLogin;
 import MedEaseNavigator.UtilityModule.UtilityMedease;
@@ -49,6 +50,7 @@ public class MedEaseApp {
         new AppointMentInterface(app.MedEaseUtil.MedEaseFrmae);
         new WaitingInterface(app.MedEaseUtil.MedEaseFrmae);
         new PaymentInterface(app.MedEaseUtil.MedEaseFrmae);
+        new MedDoctorDashBoard();
         
 
     }

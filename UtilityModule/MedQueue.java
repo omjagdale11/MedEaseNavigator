@@ -12,5 +12,6 @@ public class MedQueue {
     public void addQueue(MedQueue q){
         
     }
+    
 
 }
