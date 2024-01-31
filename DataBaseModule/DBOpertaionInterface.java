@@ -61,14 +61,14 @@ public interface DBOpertaionInterface {
     public ResultSet GetAppointmentSchedule(String Date);
 
     /*
-     * Updatye Appointmetn
+     * Update Appointmetn
      * 
      * @param Status status of appointment
      * 
      * @return boolean true if sucessfull else falsse
      * 
      */
-    public boolean UpdateAppointment(string Status){
+    public boolean UpdateAppointment(String  Status){
         return false;
     }
 

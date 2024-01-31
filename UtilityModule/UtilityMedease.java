@@ -5,6 +5,8 @@
 package MedEaseNavigator.UtilityModule;
 
 import java.sql.Connection;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.swing.JFrame;
 
@@ -17,7 +19,7 @@ public class UtilityMedease {
     public Connection DBCon; // Database Connection
     public DBConnectivity DbConnectObj; // object to create Database and estabhlish connection with database
     public MedEaseNotify Notify;
-
+    
     public UtilityMedease() {
         Notify = new MedEaseNotify();
 
@@ -25,7 +27,7 @@ public class UtilityMedease {
 
     public  void SetMainFrame(){
         MedEaseFrmae = new JFrame("MeadEas Navigator");
-        MedEaseFrmae.setSize(1440, 1020);
+        MedEaseFrmae.setSize(1920, 1220);
         MedEaseFrmae.getContentPane().setBackground(GUIUtil.Base_Background);
         MedEaseFrmae.setVisible(true);
         MedEaseFrmae.setLayout(null);
@@ -37,9 +39,20 @@ public class UtilityMedease {
      * @return   boolean     true if String length =10 and String char== 0 to 9;
      * 
      */
-    public boolean isValidNumber(String Number){
-        return false;
+    public boolean isValidNumber(String Number)
+    {
+        if(Number.length() == 10 && Number.matches("\\+d"))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
     }
+
+    
     /*
      * A Method to count Character in String 
      * @param String    A set of character array
