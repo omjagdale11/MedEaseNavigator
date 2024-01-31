@@ -6,7 +6,7 @@ public class AppointMent {
     private String PID;
     private String Name;
     AppointMent nextAppointment;
-
+    
     public void setDate(String date) {
         Date = date;
     }

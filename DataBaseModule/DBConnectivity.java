@@ -17,11 +17,12 @@ public class DBConnectivity {
     Connection DBCon;
     Statement SqlStaement;
     JDialog Notification;
+
     public DBConnectivity(String UserName, String Password, Connection DBCon) {
         this.UserName = UserName;
         this.Password = Password;
         this.DBCon = DBCon;
-        
+
     }
 
     // Set connection with Mysql
@@ -59,7 +60,7 @@ public class DBConnectivity {
                 SqlStaement.execute("Create Database " + DBName);
                 DBCon.commit();
                 // System.out.println("Crating DB");
-                DBCon= DriverManager.getConnection(UserName, "root", Password);
+                DBCon = DriverManager.getConnection(UserName, "root", Password);
                 DBCon.setAutoCommit(false);
                 return true;
 
