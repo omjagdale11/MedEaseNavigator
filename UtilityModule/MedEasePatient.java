@@ -5,8 +5,6 @@
  */
 package MedEaseNavigator.UtilityModule;
 
-import javax.swing.text.StyledEditorKit.BoldAction;
-
 public class MedEasePatient {
    private int PID; // PId+112
    private String Name;

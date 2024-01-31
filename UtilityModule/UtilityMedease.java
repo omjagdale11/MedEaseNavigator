@@ -25,7 +25,7 @@ public class UtilityMedease {
 
     public  void SetMainFrame(){
         MedEaseFrmae = new JFrame("MeadEas Navigator");
-        MedEaseFrmae.setSize(1920, 1220);
+        MedEaseFrmae.setSize(1440, 1020);
         MedEaseFrmae.getContentPane().setBackground(GUIUtil.Base_Background);
         MedEaseFrmae.setVisible(true);
         MedEaseFrmae.setLayout(null);

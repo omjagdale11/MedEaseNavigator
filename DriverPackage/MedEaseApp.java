@@ -7,8 +7,14 @@
  */
 package MedEaseNavigator.DriverPackage;
 
+import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.AppointMentInterface;
+import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.PaymentInterface;
+import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.WaitingInterface;
 import MedEaseNavigator.DataBaseModule.DBConnectivity;
+import MedEaseNavigator.FindPatientModule.FindCustomerUtil;
+import MedEaseNavigator.LoginModule.MedEaseLogin;
 import MedEaseNavigator.UtilityModule.UtilityMedease;
+import MedEaseNavigator.MedMenuBar.*;
 
 public class MedEaseApp {
     UtilityMedease MedEaseUtil;
@@ -24,11 +30,15 @@ public class MedEaseApp {
          */
         // Creating object of DBconnectivity
 <<<<<<< HEAD
+<<<<<<< HEAD
         app.MedEaseUtil.DbConnectObj = new DBConnectivity("jdbc:mysql://localhost:3306/", "Serene@123#",
                 app.MedEaseUtil.DBCon);
 =======
         app.MedEaseUtil.DbConnectObj = new DBConnectivity("jdbc:mysql://localhost:3306/", "ashroot", app.MedEaseUtil.DBCon);
 >>>>>>> cf15fe229a44e7ee4bf6f1c20a432636db11fdee
+=======
+        app.MedEaseUtil.DbConnectObj = new DBConnectivity("jdbc:mysql://localhost:3306/", "ruddarmsql", app.MedEaseUtil.DBCon);
+>>>>>>> b094cd8fb52455b7a1f061ca588d0b815a938870
         // If true then connection Sucesfull
         if (!app.MedEaseUtil.DbConnectObj.setConnection()) {
             app.MedEaseUtil.Notify.setMsg("Bhai DataBase connect Nhi ho raha hai ", -1);
@@ -42,7 +52,14 @@ public class MedEaseApp {
 =======
         // Login Moudle
         // App main screen
+        new MedEaseLogin();
         app.MedEaseUtil.SetMainFrame();
+        //Setting Srch Bar
+        new MenuBar(app.MedEaseUtil.MedEaseFrmae);
+        new FindCustomerUtil(app.MedEaseUtil.MedEaseFrmae);
+        new AppointMentInterface(app.MedEaseUtil.MedEaseFrmae);
+        new WaitingInterface(app.MedEaseUtil.MedEaseFrmae);
+        new PaymentInterface(app.MedEaseUtil.MedEaseFrmae);
         
 >>>>>>> cf15fe229a44e7ee4bf6f1c20a432636db11fdee
 
