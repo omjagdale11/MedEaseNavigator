@@ -11,18 +11,26 @@ import java.sql.Statement;
 
 import javax.swing.JDialog;
 
+
+import MedEaseNavigator.NotificationMoudle.MedEaseNotify;
+
 public class DBConnectivity {
     String UserName;
     String Password;
     Connection DBCon;
     Statement SqlStaement;
-    JDialog Notification;
+    MedEaseNotify DbNotify = new MedEaseNotify();
 
     public DBConnectivity(String UserName, String Password, Connection DBCon) {
         this.UserName = UserName;
         this.Password = Password;
         this.DBCon = DBCon;
-
+        try {
+            SqlStaement = DBCon.createStatement();
+        } catch (SQLException ex) {
+            DbNotify.setMsg("Unbale to create SqlStatment  ", -1);
+            System.exit(-1);
+        }
     }
 
     // Set connection with Mysql
@@ -33,7 +41,7 @@ public class DBConnectivity {
             return true;
         } catch (SQLException connectionError) {
             // System.out.println("ik");
-            System.out.println(connectionError);
+            DbNotify.setMsg("Unnable To Connect ", -1);
             return false;
         }
 
@@ -65,17 +73,67 @@ public class DBConnectivity {
                 return true;
 
             } catch (SQLException error) {
+                DbNotify.setMsg("DB Creation Failed ", -1);
                 return false;
             }
         }
         // System.out.println("DB exist");
         return true;
     }
+
     /*
      * A method to create Tables in DBbase
      */
-    public boolean createPatientTable(){
-         return true;
+    public boolean createPatientTable() {
+        try {
+
+            String PatientTableQuerry = "create table PATIENT" +
+                    "( Patient_ID          varchar(40)        not null     primary key," +
+                    " Name                varchar(50)        not null," +
+                    " Number              varchar(10)        not null," +
+                    " Age                 int," +
+                    " Height              varchar(5)," +
+                    " Weight              int," +
+                    " BloodGrp            varchar(3)," +
+                    " Allergy             varchar(30)," +
+                    " )";
+            if (SqlStaement.execute(PatientTableQuerry)) {
+                return true;
+            } else {
+                DbNotify.setMsg("Unable to create Patient Table", -1);
+                return false;
+            }
+        } catch (SQLException ex) {
+            DbNotify.setMsg("Error While Creating Patient Table", -1);
+        }
+        return true;
     }
+    public boolean CreateMedicalReportTable(){
+        try{
+            String MedicalReportTableQuerry="create table MEDICAL_HISTORY"+
+            " ( MRID               varchar(20)        not null     primary key,"+
+            "   Cheif_Complaint    varchar(300),"+
+            "   Diagnosis          varchar(5000),"+
+            "   Prescription       varchar(1000),"+
+            "   FollowUp_Advice    varchar(500),"+
+            "   FollowUp_Date      Date,"+
+            "   Symptoms           varchar(200),"+
+            "   "+
+            " )";
+            if(SqlStaement.execute(MedicalReportTableQuerry)){
+                return true;
+            }
+            else {
+                DbNotify.setMsg("Unable to create Medical Report Table ", -1);
+                return false;
+            }
+
+        }catch(SQLException ex){
+            DbNotify.setMsg("Error while Creating Medical Report Table", -1);
+            return false;
+        }
+
+    }
+    
 
 }

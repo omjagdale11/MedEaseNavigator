@@ -9,8 +9,8 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import MedEaseNavigator.MedEaseComponent.MedEaseBtn;
 import MedEaseNavigator.MedEaseComponent.MedPannel;
-import MedEaseNavigator.UtilityModule.AppointMent;
 import MedEaseNavigator.UtilityModule.GUIUtil;
+import MedEaseNavigator.UtilityModule.MedEasePatient;
 
 public class MedEaseAppointMentInterface {
     /*
@@ -21,9 +21,11 @@ public class MedEaseAppointMentInterface {
     MedPannel logoBox, InfoBox;
     JLabel Plogo, PID, Name, Number;
     MedEaseBtn AppointmentBtn, ViewBtn;
+    MedEasePatient Patient;
 
-    public MedEaseAppointMentInterface() {
+    public MedEaseAppointMentInterface(MedEasePatient pt) {
         PatientBox = new JDialog();
+        this.Patient= pt;
         PatientBox.setBounds(100, 50, 600, 250);
         PatientBox.setVisible(true);
         PatientBox.getContentPane().setBackground(GUIUtil.Base_Background);
@@ -52,9 +54,21 @@ public class MedEaseAppointMentInterface {
         AppointmentBtn.setText("Book Appointment");
         AppointmentBtn.setForeground(GUIUtil.WhiteClr);
         AppointmentBtn.setFont(GUIUtil.TimesBold);
-        AppointmentBtn.setBounds(435, 160, 130, 40);
-
+        AppointmentBtn.setBounds(410, 160, 150, 40);
         PatientBox.add(AppointmentBtn);
+
+        ViewBtn = new MedEaseBtn(GUIUtil.Dark_BLue, GUIUtil.WhiteClr, null, 10);
+        ViewBtn.setText("View ");
+        ViewBtn.setForeground(GUIUtil.WhiteClr);
+        ViewBtn.setFont(GUIUtil.TimesBold);
+        ViewBtn.setBounds(250,160,150,40);;
+        PatientBox.add(ViewBtn);
+        
+        
+        
+
+
+
         
 
 
