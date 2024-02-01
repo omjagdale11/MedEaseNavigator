@@ -18,7 +18,7 @@ public class AppointMentInterface {
     DefaultTableModel DTM;
     JScrollPane jsp;
     String TabelHead[] = {
-            "PID", "Name", "Number", "Status", "Time Slot"
+    "PID", "Name", "Number", "Status", "Time Slot"
     };
 
     public AppointMentInterface(JFrame MedEaseFrame) {
@@ -52,8 +52,8 @@ public class AppointMentInterface {
         jsp.setBounds(0, 0, 600, 350);
         FrontPannel.add(jsp);
         // for (int i = 0; i < TabelHead.length; i++) {
-        //      AppointMentTable.getColumnModel().getColumn(i).setMinWidth(150);
+        // AppointMentTable.getColumnModel().getColumn(i).setMinWidth(150);
         // }
-        
+
     }
 }

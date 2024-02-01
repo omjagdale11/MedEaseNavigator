@@ -23,6 +23,7 @@ public class FindCustomerUtil {
     MedEaseBtn ScrhBtn;
 
     public FindCustomerUtil(JFrame MedeaseFrame) {
+        FindPatientEventHandel eventobj=new FindPatientEventHandel(this);
         SrchPannel = new MedPannel(Color.white, GUIUtil.Dark_BLue, null, 10);
         // SrchPannel =new();
         SrchPannel.setBounds(100, 50, 600, 45);
@@ -39,6 +40,8 @@ public class FindCustomerUtil {
         SrchFeild.setBounds(10, 5, 420, 30);
         SrchPannel.add(SrchFeild);
         SrchFeild.setFont(GUIUtil.TimesBoldS2);
+        ScrhBtn.addActionListener(eventobj);
+
     }
     
 
