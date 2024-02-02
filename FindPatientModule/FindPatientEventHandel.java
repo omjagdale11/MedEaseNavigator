@@ -18,7 +18,7 @@ public class FindPatientEventHandel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == findpteint.ScrhBtn) {
             String Number = findpteint.SrchFeild.getText();
-
+            Patient = null;
             new MedEaseAppointMentInterface(Patient);
         } else {
 

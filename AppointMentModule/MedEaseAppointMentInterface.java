@@ -4,6 +4,8 @@
 package MedEaseNavigator.AppointMentModule;
 
 import java.awt.Color;
+import java.security.Guard;
+
 import javax.swing.BorderFactory;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -19,9 +21,10 @@ public class MedEaseAppointMentInterface {
      */
     JDialog PatientBox;
     MedPannel logoBox, InfoBox;
-    JLabel Plogo, PID, Name, Number;
+    JLabel Plogo, PID, Name, Number,WarngingLabel;
     MedEaseBtn AppointmentBtn, ViewBtn;
     MedEasePatient Patient;
+    AppointmenEventHandling AppointmentEvenetHanldingObj;
 
     public MedEaseAppointMentInterface(MedEasePatient pt) {
         PatientBox = new JDialog();
@@ -51,7 +54,11 @@ public class MedEaseAppointMentInterface {
         PatientBox.add(InfoBox);
 
         AppointmentBtn = new MedEaseBtn(GUIUtil.Dark_BLue, GUIUtil.Dark_BLue, null, 10);
-        AppointmentBtn.setText("Book Appointment");
+        if(Patient!=null){
+            AppointmentBtn.setText("Book Appointment");
+        }else{
+            AppointmentBtn.setText("Add Patient");
+        }
         AppointmentBtn.setForeground(GUIUtil.WhiteClr);
         AppointmentBtn.setFont(GUIUtil.TimesBold);
         AppointmentBtn.setBounds(410, 160, 150, 40);
@@ -63,14 +70,21 @@ public class MedEaseAppointMentInterface {
         ViewBtn.setFont(GUIUtil.TimesBold);
         ViewBtn.setBounds(250,160,150,40);;
         PatientBox.add(ViewBtn);
+        AppointmentEvenetHanldingObj = new AppointmenEventHandling(this);
+        AppointmentBtn.addActionListener(AppointmentEvenetHanldingObj);
+        if(Patient==null){
+            ViewBtn.setVisible(false);
+            WarngingLabel =new JLabel();
+            WarngingLabel.setText("Patient Not Found");
+            WarngingLabel.setForeground(GUIUtil.WarningColor);
+            WarngingLabel.setFont(GUIUtil.TimesBold);
+            WarngingLabel.setBounds(100, 50, 200, 30);
+            System.out.println("Code was here");
+            InfoBox.add(WarngingLabel);
+        }
         
+    }
+    public void SetPatientDetials(){
         
-        
-
-
-
-        
-
-
     }
 }

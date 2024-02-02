@@ -8,10 +8,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import javax.swing.JDialog;
-
-
 import MedEaseNavigator.NotificationMoudle.MedEaseNotify;
 
 public class DBConnectivity {
@@ -25,12 +21,7 @@ public class DBConnectivity {
         this.UserName = UserName;
         this.Password = Password;
         this.DBCon = DBCon;
-        try {
-            SqlStaement = DBCon.createStatement();
-        } catch (SQLException ex) {
-            DbNotify.setMsg("Unbale to create SqlStatment  ", -1);
-            System.exit(-1);
-        }
+        
     }
 
     // Set connection with Mysql
@@ -61,6 +52,7 @@ public class DBConnectivity {
             UserName = UserName + DBName;
             DBCon = DriverManager.getConnection(UserName, "root", Password);
             DBCon.setAutoCommit(false);
+            SqlStaement=DBCon.createStatement();
         } catch (SQLException DBCreation) {
             try {
                 SqlStaement = DBCon.createStatement();
