@@ -5,7 +5,6 @@ package MedEaseNavigator.AppointMentModule;
 
 import java.awt.Color;
 import java.security.Guard;
-
 import javax.swing.BorderFactory;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -82,9 +81,8 @@ public class MedEaseAppointMentInterface {
             System.out.println("Code was here");
             InfoBox.add(WarngingLabel);
         }
-        
     }
     public void SetPatientDetials(){
-        
+
     }
 }
