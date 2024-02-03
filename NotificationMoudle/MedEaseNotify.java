@@ -5,6 +5,7 @@
 package MedEaseNavigator.NotificationMoudle;
 import java.awt.FlowLayout;
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import MedEaseNavigator.UtilityModule.GUIUtil;
 public class MedEaseNotify {
@@ -20,6 +21,7 @@ public class MedEaseNotify {
         errorMsg = new JLabel();
         NotifyBox.add(errorMsg);
         NotifyBox.setVisible(false);
+        NotifyBox.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     // Set message for notification
@@ -36,6 +38,13 @@ public class MedEaseNotify {
             errorMsg.setFont(GUIUtil.TimesItalic);
             NotifyBox.setVisible(true);
         }
+        if(val==1){
+            errorMsg.setForeground(GUIUtil.SucesfullColor);
+            errorMsg.setText(msg);
+            errorMsg.setFont(GUIUtil.TimesBold );
+            NotifyBox.setVisible(true );
+        }
+        
     }
     
 }

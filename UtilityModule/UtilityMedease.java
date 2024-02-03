@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 
 
 import MedEaseNavigator.DataBaseModule.DBConnectivity;
+import MedEaseNavigator.DataBaseModule.DBOperation;
 import MedEaseNavigator.NotificationMoudle.MedEaseNotify;
 
 public class UtilityMedease {
@@ -17,6 +18,7 @@ public class UtilityMedease {
     public Connection DBCon; // Database Connection
     public DBConnectivity DbConnectObj; // object to create Database and estabhlish connection with database
     public MedEaseNotify Notify;
+    public DBOperation DBO;
 
     public UtilityMedease() {
         Notify = new MedEaseNotify();
