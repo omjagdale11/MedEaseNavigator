@@ -7,16 +7,9 @@
  */
 package MedEaseNavigator.DriverPackage;
 
-import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.AppointMentInterface;
-import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.PaymentInterface;
-import MedEaseNavigator.AdminDashBoard.AppointMendDashBoard.WaitingInterface;
 import MedEaseNavigator.DataBaseModule.DBConnectivity;
 import MedEaseNavigator.DataBaseModule.DBOperation;
-import MedEaseNavigator.DoctorDashBoard.MedDoctorDashBoard;
-import MedEaseNavigator.FindPatientModule.FindCustomerUtil;
-import MedEaseNavigator.LoginModule.MedEaseLogin;
 import MedEaseNavigator.UtilityModule.UtilityMedease;
-import MedEaseNavigator.MedMenuBar.*;
 
 public class MedEaseApp {
     UtilityMedease MedEaseUtil;
@@ -40,6 +33,7 @@ public class MedEaseApp {
         if(!app.MedEaseUtil.DbConnectObj.CreateDB("MedEaseNavigator")){
             app.MedEaseUtil.Notify.setMsg("Bhai DB nhi create hua ", -1);
         }
+        app.MedEaseUtil.DBCon=app.MedEaseUtil.DbConnectObj.GetConnection();
         app.MedEaseUtil.DBO =new DBOperation(app.MedEaseUtil.DBCon);
         app.MedEaseUtil.DBO.SetUserDetails("Rudarm", "ruddarm4234");
         // Creating Tables in Database if not exist

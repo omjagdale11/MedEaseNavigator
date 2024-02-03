@@ -16,12 +16,14 @@ public class DBConnectivity {
     Connection DBCon;
     Statement SqlStaement;
     MedEaseNotify DbNotify = new MedEaseNotify();
-
-    public DBConnectivity(String UserName, String Password, Connection DBCon) {
+    public DBConnectivity(String UserName, String Password, Connection DBCon2) {
         this.UserName = UserName;
         this.Password = Password;
-        this.DBCon = DBCon;
+        this.DBCon = DBCon2;
+    }
 
+    public Connection GetConnection(){
+        return DBCon;
     }
 
     // Set connection with Mysql
